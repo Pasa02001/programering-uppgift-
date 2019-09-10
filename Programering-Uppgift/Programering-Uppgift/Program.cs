@@ -6,18 +6,32 @@ namespace Programering_Uppgift
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int RNumber = random.Next(0, 100);
 
-            int Snummer = Int32.Parse(Console.ReadLine());
-            Console.WriteLine(RNumber);
 
-            if (Snummer > RNumber)
-                Console.WriteLine("Ditt tal är större");
-            if (Snummer < RNumber) 
-                Console.WriteLine("Ditt nummer är mindre");
-            else 
-                Console.WriteLine("Ditt nummer är lika stort");
+
+            Console.Write("Gissa ett tal: ");
+                Random random = new Random();
+                int RNumber = random.Next(0, 100);
+            while (true)
+            {
+                int Snummer = Int32.Parse(Console.ReadLine());
+
+       
+
+                if (Snummer > RNumber)
+                    Console.WriteLine("Ditt tal måste bli mindre");
+                if (Snummer < RNumber)
+                    Console.WriteLine("Ditt tal måste bli större");
+                    
+                if (Snummer == RNumber)
+                    Console.WriteLine("Ditt tal är lika stort");
+
+                if (Snummer != RNumber)
+                    Console.Write("Testa igen: ");
+
+                if (Snummer == RNumber)
+                    break;
+            }
 
 
         }
