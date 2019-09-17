@@ -24,13 +24,13 @@ namespace Programering_Uppgift
                     Console.WriteLine("Ditt tal måste bli mindre"); // Ifall if satsen genomförs så sta den skriva att talet faktiskt är för stort 
                     Console.Write("Försök igen: "); // säjer till att man ska försöka igen
                 }
-                if (Snummer < RNumber)// I denna så är det samma prensip och kollar ifalld talet är mindre istället för att kolla ifall det är större
-                { 
+                else if (Snummer < RNumber)// I denna så är det samma prensip och kollar ifalld talet är mindre istället för att kolla ifall det är större. Fiall den går ingenom denna else if så kommer den leda vidare till else.
+                {
                     Console.WriteLine("Ditt tal måste bli större"); // Ifall if satsen genomförs så skriver den ut att talet är för litet
                     Console.Write("Försök igen: ");//Säjer att man ska försöka igen
                 }
-                if (Snummer == RNumber)// ifall talet nu blir lika stort så utförs denna ifsatsen 
-                {   
+                else  // ifall ingen av de ovan stämmer då har du klarat spelat 
+                {
                     Console.WriteLine("Ditt tal är lika stort"); // När ifsatsen kör så kommer den först köra "Ditt tal är lika stort"
                     Console.WriteLine("Det tog " + försök + " försök innan du klarade uppgiften"); // Här skrivs bårde text och int talet som har fått ett värde på hur månag gånger loopen har körts
                     break; //ifall if satsen är genomföd så kommer while loopen stopas här.
